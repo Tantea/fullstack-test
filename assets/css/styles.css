@@ -1,0 +1,255 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.header {
+  border-bottom: 1px solid #e4e2e0;
+  height: 4em;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2em;
+}
+.header h1 {
+  color: #003a9b;
+  font-size: 2rem;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header .alert.alert-success {
+  color: #003a9b;
+}
+.header .alert.alert-danger {
+  color: #ff2c2c;
+}
+
+.content {
+  height: calc(100vh - 12em);
+  padding: 2em;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.content::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: #2557a7;
+}
+.content .row {
+  display: grid;
+  grid-template-columns: 200px 150px 230px 200px 200px 200px 300px 120px;
+  border-bottom: 1px solid #949494;
+  min-width: 1500px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 1094px) {
+  .content .row {
+    grid-template-columns: 25rem 20rem 32rem 25rem 25rem 25rem 35rem 20rem;
+  }
+}
+.content .row:first-child {
+  border-top: 1px solid #949494;
+}
+.content .row:first-child > div {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #003a9b;
+  text-transform: capitalize;
+}
+.content .row > div {
+  padding: 0.25rem 1rem;
+}
+@media (max-width: 1094px) {
+  .content .row > div {
+    padding: 1.25rem 1.2rem;
+  }
+}
+.content .row > div:first-child {
+  border-left: 1px solid #949494;
+}
+.content .row > div:last-child {
+  border-right: 1px solid #949494;
+}
+.content .row > div a {
+  text-transform: lowercase;
+  color: #003a9b;
+  text-decoration: none;
+}
+.content .row > div a:hover, .content .row > div a:active, .content .row > div a:active:focus, .content .row > div a:visited {
+  color: #003a9b;
+}
+.content .row > div + div {
+  border-left: 1px solid #949494;
+}
+.content form .form-row {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #949494;
+  min-width: 500px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 1094px) {
+  .content form .form-row {
+    grid-template-columns: 25rem 20rem 32rem 25rem 25rem 25rem 35rem 20rem;
+  }
+}
+.content form .form-row:first-child {
+  border-top: 1px solid #949494;
+}
+.content form .form-row:first-child > div {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #003a9b;
+  text-transform: capitalize;
+}
+.content form .form-row > div {
+  padding: 0.25rem 1rem;
+}
+@media (max-width: 1094px) {
+  .content form .form-row > div {
+    padding: 1.25rem 1.2rem;
+  }
+}
+.content form .form-row > div:first-child {
+  border-left: 1px solid #949494;
+}
+.content form .form-row > div:last-child {
+  border-right: 1px solid #949494;
+}
+.content form .form-row > div a {
+  text-transform: lowercase;
+  color: #003a9b;
+}
+.content form .form-row > div a:hover, .content form .form-row > div a:active, .content form .form-row > div a:active:focus, .content form .form-row > div a:visited {
+  color: #003a9b;
+}
+.content form .form-row > div + div {
+  border-left: 1px solid #949494;
+}
+.content form .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  width: 400px;
+}
+.content form .form-wrapper label {
+  font-weight: 600;
+  color: #003a9b;
+}
+.content form .form-wrapper input[type=text], .content form .form-wrapper input[type=email], .content form .form-wrapper input[type=phone], .content form .form-wrapper input[type=number] {
+  padding: 0.25rem 0.55rem;
+  margin: 0.25rem 0 0 0;
+  border: 1px solid #949494;
+  outline: 0;
+}
+.content form .form-wrapper input[type=text]:hover, .content form .form-wrapper input[type=text]:active, .content form .form-wrapper input[type=text]:active:focus, .content form .form-wrapper input[type=email]:hover, .content form .form-wrapper input[type=email]:active, .content form .form-wrapper input[type=email]:active:focus, .content form .form-wrapper input[type=phone]:hover, .content form .form-wrapper input[type=phone]:active, .content form .form-wrapper input[type=phone]:active:focus, .content form .form-wrapper input[type=number]:hover, .content form .form-wrapper input[type=number]:active, .content form .form-wrapper input[type=number]:active:focus {
+  border: 1px solid #2557a7;
+}
+
+.standart-button {
+  cursor: pointer;
+  background: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.43;
+  margin: 0;
+  line-height: 1.125rem;
+  padding: 0.75rem 1rem;
+  display: block;
+  box-sizing: border-box;
+  white-space: nowrap;
+  word-break: keep-all;
+  flex-shrink: 0;
+  background-color: #2557a7;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.5rem;
+  color: #fff;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  min-width: 94px;
+  width: 94px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.standart-button:hover {
+  background-color: #164081;
+}
+
+.remove-button {
+  cursor: pointer;
+  background: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.43;
+  margin: 0;
+  line-height: 1.125rem;
+  padding: 0.25rem 1rem;
+  display: block;
+  box-sizing: border-box;
+  white-space: nowrap;
+  word-break: keep-all;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.0625rem solid #2557a7;
+  border-radius: 0.5rem;
+  color: #2557a7;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  min-width: 94px;
+  width: 94px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.3s;
+}
+.remove-button:hover, .remove-button:active, .remove-button:active:focus, .remove-button:visited {
+  background-color: #164081;
+  color: #fff !important;
+  transition: 0.3s;
+}
+@media (max-width: 1094px) {
+  .remove-button {
+    font-size: 1.875rem;
+    width: 10rem;
+    padding: 0.75rem 1.55rem;
+  }
+}
+
+.footer {
+  border-top: 1px solid #e4e2e0;
+  height: 4em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.footer div, .footer a {
+  color: #2d2d2d;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0;
+}/*# sourceMappingURL=styles.css.map */
